@@ -34,6 +34,11 @@ describe('Pizza', function() {
         var topping2 = "mushrooms";
         testPizza.addTopping(topping1);
         testPizza.addTopping(topping2);
-        expect(testPizza.calculatePrice()).to.equal(15.50);
+        expect(testPizza.calculatePrice()).to.equal(31.00);
+    });
+    
+    it("Calculates price of Pizza", function() {
+        var testPizza = new Pizza(1, "cheese", "s");
+        expect(testPizza.calculatePrice()).to.equal(11.5);
     });
 });

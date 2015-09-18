@@ -33,19 +33,19 @@ Pizza.prototype.calculatePrice = function(){
 
 $(document).ready(function() {
     var newPizza;
-    $("#add-toppings").click(function(){
-        $("#new-toppings").append('<label for="topping">Topping</label>' +
-									'<select name="topping" id="topping">' +
-										'<option value="cheese">Cheese</option>' +
-										'<option value="pepperoni">Pepperoni</option>' +
-										'<option value="mushrooms">mushrooms</option>' +
-										'<option value="pinepple">pinepple</option>' +
-										'<option value="sausage">sausage</option>' +
-										'<option value="ham">ham</option>' +
-										'<option value="chicken">chicken</option>' +
-									'</select>' +
-								'<br>')
-    });
+    // $("#add-toppings").click(function(){
+    //     $("#new-toppings").append('<label for="topping">Topping</label>' +
+	// 								'<select name="topping" id="topping">' +
+	// 									'<option value="cheese">Cheese</option>' +
+	// 									'<option value="pepperoni">Pepperoni</option>' +
+	// 									'<option value="mushrooms">mushrooms</option>' +
+	// 									'<option value="pinepple">pinepple</option>' +
+	// 									'<option value="sausage">sausage</option>' +
+	// 									'<option value="ham">ham</option>' +
+	// 									'<option value="chicken">chicken</option>' +
+	// 								'</select>' +
+	// 							'<br>')
+    // });
     
     $("form#new-pizza").submit(function(event) {
        event.preventDefault();
@@ -56,13 +56,15 @@ $(document).ready(function() {
        
        newPizza = new Pizza(inputtedQuantity, inputtedTopping, inputtedSize);
        
-       $(".new-toppings").each(function() {
-			var inputtedTopping2 = $("select#topping").val(); 
-            newPizza.addTopping(inputtedTopping2);
-		});
+       // $(".new-toppings").each(function() {
+		// 	var inputtedTopping2 = $(this).find("select#topping").val(); 
+        //     newPizza.toppings.push(inputtedTopping2);
+		// });
+        
+        var result = newPizza.calculatePrice();
        
        $(".price").fadeOut();
        $(".price").fadeIn(1000);
-       $(".pizza-price").text(newPizza.calculatePrice());
+       $(".pizza-price").text(result);
     });
 });
