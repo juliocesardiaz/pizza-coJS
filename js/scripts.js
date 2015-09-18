@@ -27,6 +27,7 @@ Pizza.prototype.calculatePrice = function(){
             price += 4;
             break;          
     }
+    price *= this.quantity;
     return price;
 };
 
