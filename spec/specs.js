@@ -18,4 +18,22 @@ describe('Pizza', function() {
         var testPizza = new Pizza(2, "cheese", "s");
         expect(testPizza.size).to.equal("s");
     });
+    
+    it("Check if adds Toppings to Pizza", function() {
+        var testPizza = new Pizza(2, "cheese", "s");
+        var topping1 = "peperonni";
+        var topping2 = "mushrooms";
+        testPizza.addTopping(topping1);
+        testPizza.addTopping(topping2);
+        expect(testPizza.toppings).to.eql(["cheese", "peperonni", "mushrooms"]);
+    });
+    
+    it("Calculates price of Pizza", function() {
+        var testPizza = new Pizza(2, "cheese", "xl");
+        var topping1 = "peperonni";
+        var topping2 = "mushrooms";
+        testPizza.addTopping(topping1);
+        testPizza.addTopping(topping2);
+        expect(testPizza.calculatePrice()).to.equal(15.50);
+    });
 });
