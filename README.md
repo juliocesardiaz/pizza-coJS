@@ -1,17 +1,16 @@
-# Bank Account
+# Pizza Co
 
-##### A website that allows users to create a bank account and deposit and withdraw from it. The account balance shows the final amount in the account. (9/15/15)
-
-#### By Logan Wu, Ian McKenney & Julio Diaz
+##### A website that allows users to create a Pizza  and check it's price
+#### By Julio Diaz
 
 ## Description
 
-Input fields include ```userName```, ```balance```, ```deposit```, and ```withdraw```. Constructor: ```BankAccount```. Prototypes: ```BankAccount.prototype.deposit``` and ```BankAccount.prototype.withdraw```.
+Input fields include ```quantity```, ```topping```, ```size```.
 
 ## Setup
 
 * Clone the project using the link provided on Github in the Terminal.
-* Open ```bankaccount.html``` from the main project folder.
+* Open ```pizza-co.html``` from the main project folder.
 
 ## Technologies Used
 
@@ -19,7 +18,7 @@ HTML, CSS, JavaScript, jQuery, MochaJS, Chai Assertion Library
 
 ### Legal
 
-Copyright (c) 2015 **Logan Wu, Ian McKenney & Julio Diaz**
+Copyright (c) 2015 **Julio Diaz**
 
 This software is licensed under the MIT license.
 
